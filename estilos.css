@@ -596,9 +596,18 @@ h2 span {
         z-index: 1;
     }
 
-    .imagen-contacto img {
-        max-width: 100%; /* La imagen ocupa todo el espacio disponible */
-        height: 600px; /* Mantiene la proporción de la imagen */
+    .imagen-contacto{
+        width: 100%;
+        height: 100%;
+        display: flex; /* Asegura que los elementos hijos respeten el diseño */
+        justify-content: center; /* Centra horizontalmente el iframe */
+        align-items: center; /* Centra verticalmente el iframe */
+        overflow: hidden; /* Elimina cualquier contenido que sobresalga */
+    }
+
+    .imagen-contacto iframe {
+        width: 100%; /* El iframe ocupa todo el ancho del contenedor */
+        height: 650px;
     }    
 
     .contactanos {
@@ -709,9 +718,19 @@ h2 span {
         margin-right: 0px;
     }
 
-    .imagen-contacto img {
-        max-width: 100%; /* La imagen ocupa todo el espacio disponible */
-        height: 600px; /* Mantiene la proporción de la imagen */
+    .imagen-contacto{
+        width: 100%;
+        height: 100%;
+        display: flex; /* Asegura que los elementos hijos respeten el diseño */
+        justify-content: center; /* Centra horizontalmente el iframe */
+        align-items: center; /* Centra verticalmente el iframe */
+        overflow: hidden; /* Elimina cualquier contenido que sobresalga */
+    }
+
+    .imagen-contacto iframe {
+        width: 100%; /* El iframe ocupa todo el ancho del contenedor */
+        height: 650px;
+        padding-right: 20px;
     }    
 
     .contactanos {
@@ -847,15 +866,20 @@ h2 span {
         width: 100%; /* Ambos ocupan todo el ancho disponible */
     }
 
-    .imagen-contacto {
-        flex: none; /* Desactiva el ancho proporcional */
-        width: 100%; /* Ambos ocupan todo el ancho disponible */
+    .imagen-contacto{
+        width: 100%;
+        display: flex; /* Asegura que los elementos hijos respeten el diseño */
+        justify-content: center; /* Centra horizontalmente el iframe */
+        align-items: center; /* Centra verticalmente el iframe */
+        overflow: hidden; /* Elimina cualquier contenido que sobresalga */
     }
 
-    .imagen-contacto img {
-        max-width: 100%; /* La imagen ocupa todo el ancho disponible */
-        height: auto; /* Mantiene la proporción de la imagen */
-    }
+    .imagen-contacto iframe {
+        width: 95%; /* El iframe ocupa todo el ancho del contenedor */
+        height: 400px;
+        padding-right: 0px;
+        padding-bottom: 30px;
+    }  
 
     .footer {
         padding: 30px 75px;
@@ -881,4 +905,3 @@ h2 span {
         padding-left: 0px;
     }
 }
-
