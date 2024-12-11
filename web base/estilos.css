@@ -1,0 +1,908 @@
+body {
+    background-color: white;
+}
+.navbar-nav {
+    margin-left: 0px; /* Empuja los enlaces hacia la derecha */
+    margin-right: 0px; /* Ajusta la distancia desde la derecha */
+    font-weight: 600;
+}
+
+/* Hero Section General */
+.hero {
+    background-image: url(./imgs/imgaprioriv2.jpg); /* URL de la imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 90vh; /* Ocupa el 90% de la ventana */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; /* Centra verticalmente */
+    text-align: left;
+    position: relative; /* Para elementos absolutivos */
+    padding: 0 40px; /* Espaciado interno lateral */
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.25); /* Superposición oscura */
+    z-index: 1;
+}
+  
+.hero > div {
+    position: relative;
+    z-index: 2; /* Asegura que el contenido esté sobre el overlay */
+    display: flex;
+    flex-direction: column; /* Elementos en columna */
+    gap: 20px; /* Espaciado entre elementos */
+    margin-top: -100px;
+}  
+
+h1 span {
+    display: inline; /* Asegura que los elementos se mantengan en la misma línea */
+    margin-right: 10px;
+}
+
+h2 span {
+    display: inline; /* Asegura que los elementos se mantengan en la misma línea */
+    margin-right: 10px;
+    color: #67F4DD;
+}
+
+.highlight {
+    color: #F5C261; /* Aplica un color distintivo a la palabra "Soluciones" */
+}
+
+/* Titulares */
+.hero h1 {
+    font-size: 3rem; /* Tamaño grande */
+    font-weight: bold;
+    color: white;
+    margin: 0; /* Quita márgenes extra */
+    padding-left: 40px;
+}
+
+.hero h2 {
+    font-size: 1.5rem; /* Más pequeño que h1 */
+    font-weight: 600;
+    color: #67F4DD; /* Color para h2 */
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 40px;
+}
+
+/* Seccion de Servicios */
+
+.servicios {
+    position: relative;
+    display: flex; /* Activa Flexbox */
+    flex-direction: column;
+    justify-content: flex-start; /* Centra horizontalmente */
+    min-height: 100vh; /* Asegura que ocupe toda la altura visible */
+    text-align: center; /* Asegura que el texto esté centrado */
+    margin-bottom: 40px; /* Espaciado entre la sección servicios y la siguiente */
+}
+
+.servicios::before,
+.servicios::after {
+    content: ''; /* Crea un contenedor vacío para la línea curva */
+    position: absolute;
+    left: 0;
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    height: 150px; /* Altura de la línea curva (ajústalo según sea necesario) */
+    background: url('./imgs/Line3.png') no-repeat center;
+    background-size: contain; /* Ajusta la imagen para que encaje completamente */
+    z-index: 0; /* Asegura que esté detrás del contenido */
+}
+
+.servicios::before {
+    top: 44%; /* Primera línea curva */
+}
+
+.servicios::after {
+    top: 50%; /* Segunda línea curva con espacio entre ellas */
+}
+
+.linea-curva {
+    position: absolute; /* Posiciona la imagen detrás del contenido */
+    top: 49%; /* Ajusta la posición vertical */
+    left: 0;
+    width: 100%; /* Asegura que la curva ocupe todo el ancho */
+    z-index: 0; /* Coloca la curva detrás del contenido */
+    transform: translateY(-50%); /* Ajusta la posición para centrar */
+}
+
+/* Titulares Servicio*/
+.servicios h2 {
+    padding: 20px 0px;
+    font-weight: 650;
+    color: black;
+    margin: 0; /* Elimina márgenes predeterminados */
+}
+
+/* Contenedor de las Cajas Servicio*/
+.cajas {
+    position: relative; /* Coloca las cajas sobre la curva */
+    display: flex; /* Activa Flexbox */
+    flex-wrap: wrap; /* Permite que las cajas se muevan a una nueva línea en pantallas pequeñas */
+    gap: 80px; /* Espaciado entre las cajas */
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    justify-content: center; /* Centra las cajas horizontalmente */
+    margin-top: 18px; /* Espaciado desde el h2 */
+    z-index: 1;
+}
+
+.sub-cajas {
+    position: relative; /* Coloca las cajas sobre la curva */
+    display: flex; /* Activa Flexbox */
+    flex-wrap: wrap; /* Permite el apilado */
+    gap: 80px; /* Espaciado entre las cajas */
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    justify-content: center; /* Centra las cajas horizontalmente */
+    margin-top: 35px; /* Espaciado desde el h2 */
+    z-index: 1;
+}
+
+/* Estilo de las Cajas Servicio*/
+.caja, .subcaja{
+    background-color: white; /* Fondo claro */
+    border: 1px solid white; /* Borde gris claro */
+    border-radius: 8px; /* Bordes redondeados */
+    justify-content: space-between; /* Separa el título y el párrafo */
+    align-items: flex-start; /* Alinea ambos elementos a la izquierda */
+    width: 380px; /* Ancho de cada caja */
+    height: 350px; /* Altura de cada caja */
+    display: flex; /* Centra el contenido dentro de la caja */
+    flex-direction: column;
+    padding: 80px 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.35); /* Sombra suave */
+}
+
+.caja h3 {
+    margin: 0;
+    color: #375E86; /* Color del título */
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.subcaja h3{
+    margin: 0;
+    color: #375E86; /* Color del título */
+    font-weight: 700;
+    font-size: 1.25rem;
+    text-align: left;
+}
+
+.caja p {
+    padding-top: 5%;
+    font-size: 0.93rem;
+    margin: 5;
+    color: #666; /* Color del texto */
+    line-height: 1.5; /* Espaciado entre líneas */
+    text-align: left;
+}
+
+.subcaja p {
+    padding-top: 4%;
+    font-size: 0.93rem;
+    margin: 5;
+    color: #666; /* Color del texto */
+    line-height: 1.5; /* Espaciado entre líneas */
+    text-align: left;
+}
+
+/*Seccion choice*/
+.choice {
+    display: flex; /* Activa Flexbox */
+    justify-content: center; /* Centra horizontalmente el contenido dentro de la sección */
+    align-items: center; /* Centra verticalmente el contenido dentro de la sección */
+    min-height: 60vh; /* Altura completa de la ventana */
+    background-color: #F6F6F6; /* Fondo gris */
+    padding-top: 0px; /* Espaciado interno */
+    
+}
+
+.choice .porque-elegirnos {
+    display: flex; /* Activa Flexbox para organizar la imagen y el texto en fila */
+    justify-content: left; /* Centra el contenido */
+    align-items: left; /* Alinea verticalmente la imagen y el texto */
+    gap: 40px; /* Espaciado entre la imagen y el texto */
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    margin-right: 160px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.choice h2 {
+    padding-bottom: 15px;
+    font-weight: 650;
+    color: black;
+    margin: 0; /* Elimina márgenes predeterminados */
+    font-size: 2rem; /* Tamaño del texto */
+    font-weight: 650; /* Grosor de la fuente */
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.choice p {
+    display: flex; /* Activa Flexbox */
+    flex-direction: column; /* Coloca los elementos en columna */
+    justify-content: flex-start; /* Alinea los elementos al inicio */
+    text-align: left; /* Alinea el texto a la izquierda */
+    font-weight: 520;
+    padding-left: 0px;
+}
+
+.choice img {
+    max-width: 800px; /* Tamaño máximo de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: cover; /* Ajusta el contenido si la imagen tiene proporciones diferentes */
+}
+
+/* Seccion Clientes */
+
+.clientes {
+    position: relative;
+    display: flex; /* Activa Flexbox */
+    flex-direction: column;
+    justify-content: flex-start; /* Centra horizontalmente */
+    min-height: 30vh; /* Asegura que ocupe toda la altura visible */
+    text-align: center; /* Asegura que el texto esté centrado */
+    margin-bottom: 60px; /* Espaciado entre la sección servicios y la siguiente */
+}
+
+.clientes h3 {
+    font-weight: bold;
+    padding-bottom: 30px;
+}
+
+.clientes h5 {
+    font-weight: bold;
+    color: #7FD6EA;
+}
+
+.cajas-clientes {
+    position: relative; 
+    display: flex; /* Activa Flexbox */
+    flex-wrap: wrap; /* Permite que las cajas se muevan a una nueva línea en pantallas pequeñas */
+    gap: 40px; /* Espaciado entre las cajas */
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    justify-content: center; /* Centra las cajas horizontalmente */
+    z-index: 1;
+}
+
+.caja-cliente{
+    background-color: white; /* Fondo claro */
+    border: 1px solid white; /* Borde gris claro */
+    border-radius: 8px; /* Bordes redondeados */
+    width: 180px; /* Ancho de cada caja */
+    height: 180px; /* Altura de cada caja */
+    display: flex; /* Centra el contenido dentro de la caja */
+    flex-direction: column;
+    padding: 80px 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.35); /* Sombra suave */
+}
+
+/* Seccion Contactanos */
+
+.contactanos {
+    background-color: #2E3E4E;
+    color: white;
+    padding: 50px 100px; /* Espaciado interno */
+}
+
+.contactanos h5 {
+    color: #6492C0;
+}
+
+.contacto p{
+    padding-top: 10px;
+}
+
+.contenedor-contacto {
+    display: flex; /* Activa Flexbox */
+    justify-content: space-between; /* Espacia las columnas */
+    align-items: flex-start; /* Alinea los elementos al inicio vertical */
+    gap: 40px; /* Espaciado entre las columnas */
+}
+
+.formulario-contacto {
+    flex: 1; /* El formulario ocupa la mitad del ancho */
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.contacto {
+    flex: 1; /* El formulario ocupa una parte proporcional del espacio */
+}
+
+.contacto .nombre, .correo {
+    width: 57%; /* El input ocupa todo el ancho del contenedor */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    border-radius: 0px; /* Bordes redondeados */
+    background-color: #375E86;
+}
+
+.contacto .cuentanos {
+    width: 100%; /* El input ocupa todo el ancho del contenedor */
+    height: 200px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    border-radius: 0px; /* Bordes redondeados */
+    background-color: #375E86;
+    color: white; /* Color del texto */
+    resize: none; /* Evita que el usuario cambie el tamaño del textarea */
+}
+
+.imagen-contacto {
+    flex: 1; /* La imagen ocupa la otra mitad */
+    display: flex;
+    justify-content: center; /* Centra la imagen horizontalmente */
+    align-items: flex-start; /* Alinea la imagen al inicio vertical */
+}
+
+.imagen-contacto img {
+    max-width: 75%; /* La imagen ocupa todo el espacio disponible */
+    height: 600px; /* Mantiene la proporción de la imagen */
+}
+
+#char-counter {
+    font-size: 0.9rem;
+    text-align: right; /* Alinea el contador a la derecha */
+}
+
+/* Botones General*/
+.btn-hero {
+    display: flex;
+    gap: 40px; /* Espaciado entre botones */
+    padding-left: 40px;
+}
+
+.btn-servicios {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.btn-choices {
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+    margin-right: 40px;
+}
+
+.btn-contactanos {
+    display: flex;
+    margin-top: -15px;
+}
+
+.btn-escribenos {
+    padding: 10px 35px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #000000;
+    color: #F5C261;
+}
+
+.btn-sobre {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #F5C261;
+    color: #000000;
+}
+
+.btn-servicio {
+    padding: 18px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #F5C261;
+    color: #000000;
+}
+
+.btn-choice {
+    padding: 15px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #7FD6EA;
+    color: #000000;
+}
+
+.btn-contacto {
+    background-color: #2E7ECE;
+    border: none; /* Sin bordes */
+    color: white;
+    padding: 5px 30px;
+}
+
+/* FOOTER */
+
+/* General del Footer */
+.footer {
+    background-color: #2B4661; /* Fondo oscuro */
+    color: white; /* Texto blanco */
+    padding: 50px 150px; /* Espaciado interno */
+    text-align: left; /* Alineación predeterminada */
+    font-size: 0.9rem;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+}
+
+.footer-container {
+    display: flex; /* Divide en columnas */
+    justify-content: space-between; /* Espacia las columnas */
+    flex-wrap: wrap; /* Permite apilado en pantallas pequeñas */
+    gap: 20px; /* Espaciado entre columnas */
+}
+
+#colv1 {
+    margin-right: 50px;
+    max-width: 350px; /* Ajusta este valor según el espacio que quieras ocupar */
+    word-wrap: break-word; /* Asegura que las palabras largas se corten */
+    overflow-wrap: break-word; /* Similar al anterior, para compatibilidad */
+}
+
+#colv1 p{
+    color: #73A7DC;
+}
+
+#colv2 {
+    margin-right: 60px;
+    text-align: left;
+}
+
+#colv2 ul {
+    list-style-type: none; /* Elimina los puntos o viñetas antes del texto */
+    padding: 0; /* Elimina el espaciado interno predeterminado */
+    margin: 0; /* Elimina el margen externo predeterminado */
+}
+
+#colv2 ul li {
+    margin-bottom: 10px; /* Espaciado entre las filas (opcional) */
+}
+
+#colv2 ul li a {
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    color: #6492C0; /* Cambia el color del enlace */
+    font-weight: 600; /* Aumenta el grosor del texto (opcional) */
+}
+
+#colv2 ul li a:hover {
+    color: #ffffff; /* Cambia el color al pasar el cursor (opcional) */
+    text-decoration: none; /* Añade subrayado al pasar el cursor (opcional) */
+}
+
+#colv3 {
+    margin-right: 50px;
+}
+
+#colv3 p {
+    color: #73A7DC;
+}
+
+/* Sección de Copyright */
+.copyright {
+    background-color: #46688A; /* Fondo del copyright */
+    width: 100%; /* Ocupa todo el ancho */
+    text-align: left; /* Centra el texto */
+    color: white; /* Color del texto */
+    font-size: 0.8rem; /* Tamaño del texto */
+    padding: 5px 0; /* Espaciado interno */
+    margin: 0; /* Elimina márgenes externos */
+}
+
+.copyright p {
+    padding-top: 15px;
+    padding-left: 100px;
+}
+
+/* Responsividad */
+
+@media (max-width: 1024px) {
+    .hero {
+        justify-content: flex-start;
+        padding-left: 100px; /* Más espacio en pantallas más grandes */
+    }
+
+    .hero h1 {
+        line-height: 1.3;
+    }
+
+    .servicios h1 {
+        justify-content: flex-start;
+        padding-left: 100px; /* Más espacio en pantallas más grandes */
+    }
+
+    .btn-servicio{
+        margin-top: 0px;
+    }
+    
+    .choice img {
+        max-width: 500px; /* Tamaño máximo de la imagen */
+        height: auto; /* Mantiene la proporción de la imagen */
+    }
+
+    .choice .porque-elegirnos {
+        display: flex; /* Activa Flexbox para organizar la imagen y el texto en fila */
+        justify-content: center; 
+        align-items: left; /* Alinea verticalmente la imagen y el texto */
+        gap: 0px; /* Espaciado entre la imagen y el texto */
+        max-width: 1200px; /* Ancho máximo del contenedor */
+        width: 100%; /* Ocupa todo el ancho disponible */
+        margin-right: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .choice h2 {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 100px;
+        padding-right: 100px;
+        font-weight: 650;
+        color: black;
+        margin: 0; /* Elimina márgenes predeterminados */
+        font-size: 2rem; /* Tamaño del texto */
+        font-weight: 650; /* Grosor de la fuente */
+        text-align: center; /* Alinea el texto a la izquierda */
+    }
+    
+    .choice p {
+        padding-left: 110px;
+        padding-right: 100px;
+        flex-direction: column; /* Coloca los elementos en columna */
+        justify-content: center; /* Alinea los elementos al inicio */
+        text-align: left; /* Alinea el texto a la izquierda */
+        font-weight: 520;
+    }
+    
+    .btn-choices {
+        display: flex;
+        justify-content: center;
+        margin-top: 35px;
+        margin-right: 0px;
+    }
+
+    .cajas-clientes {
+        display: grid; /* Cambia a Grid */
+        grid-template-columns: repeat(3, 0.2fr); /* 3 columnas de igual ancho */
+        flex-wrap: wrap; /* Permite que las cajas se muevan a una nueva línea en pantallas pequeñas */
+        gap: 60px; /* Espaciado entre las cajas */
+        width: 100%; /* Asegura que ocupe todo el ancho disponible */
+        justify-content: center; /* Centra las cajas horizontalmente */
+        z-index: 1;
+    }
+
+    .imagen-contacto{
+        width: 100%;
+        height: 100%;
+        display: flex; /* Asegura que los elementos hijos respeten el diseño */
+        justify-content: center; /* Centra horizontalmente el iframe */
+        align-items: center; /* Centra verticalmente el iframe */
+        overflow: hidden; /* Elimina cualquier contenido que sobresalga */
+    }
+
+    .imagen-contacto iframe {
+        width: 100%; /* El iframe ocupa todo el ancho del contenedor */
+        height: 650px;
+    }    
+
+    .contactanos {
+        background-color: #2E3E4E;
+        color: white;
+        padding: 50px 50px; /* Espaciado interno */
+    }
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .hero {
+        text-align: center; /* Cambia alineación a centro */
+        justify-content: center;
+        padding-left: 0px;
+        padding-right: 0px;   
+    }
+
+    .hero h1 {
+        font-size: 2rem; /* Reduce tamaño del texto */
+        padding-left: 5px;
+    }
+
+    .hero h2 {
+        font-size: 1.2rem; /* Reduce tamaño del subtítulo */
+        padding-left: 0px;
+    }
+
+    .btn-hero {
+        flex-direction: column; /* Botones en columna */
+        padding-left: 0px;
+        gap: 10px;
+    }
+
+    .btn-escribenos,
+    .btn-sobre {
+        width: 100%; /* Botones ocupan todo el ancho */
+    }
+
+    .btn-servicios {
+        flex-direction: column; /* Apila los botones verticalmente */
+        margin-top: 50px;
+        align-items: center;
+    }
+
+    .cajas {
+        position: relative; /* Coloca las cajas sobre la curva */
+        display: flex; /* Activa Flexbox */
+        flex-wrap: wrap; /* Permite que las cajas se muevan a una nueva línea en pantallas pequeñas */
+        width: 100%; /* Asegura que ocupe todo el ancho disponible */
+        justify-content: center; /* Centra las cajas horizontalmente */
+        gap: 50px;
+        margin-top: 50px;
+        z-index: 1;
+    }
+
+    .sub-cajas {
+        position: relative; /* Coloca las cajas sobre la curva */
+        display: flex; /* Activa Flexbox */
+        flex-wrap: wrap; /* Permite que las cajas se muevan a una nueva línea en pantallas pequeñas */
+        width: 100%; /* Asegura que ocupe todo el ancho disponible */
+        justify-content: center; /* Centra las cajas horizontalmente */
+        gap: 50px;
+        margin-top: 50px;
+        z-index: 1;
+    }
+    .choice img {
+        max-width: 400px; /* Tamaño máximo de la imagen */
+        height: auto; /* Mantiene la proporción de la imagen */
+    }
+
+    .choice .porque-elegirnos {
+        display: flex; /* Activa Flexbox para organizar la imagen y el texto en fila */
+        justify-content: center; 
+        align-items: left; /* Alinea verticalmente la imagen y el texto */
+        gap: 0px; /* Espaciado entre la imagen y el texto */
+        max-width: 1200px; /* Ancho máximo del contenedor */
+        width: 100%; /* Ocupa todo el ancho disponible */
+        margin-right: 0px;
+    }
+
+    .choice h2 {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 50px;
+        padding-right: 50px;
+        font-weight: 650;
+        color: black;
+        margin: 0; /* Elimina márgenes predeterminados */
+        font-size: 2rem; /* Tamaño del texto */
+        font-weight: 650; /* Grosor de la fuente */
+        text-align: center; /* Alinea el texto a la izquierda */
+    }
+    
+    .choice p {
+        padding-left: 60px;
+        padding-right: 50px;
+        flex-direction: column; /* Coloca los elementos en columna */
+        justify-content: center; /* Alinea los elementos al inicio */
+        text-align: left; /* Alinea el texto a la izquierda */
+        font-weight: 520;
+    }
+
+    .btn-choices {
+        display: flex;
+        justify-content: center;
+        margin-top: 35px;
+        margin-right: 0px;
+    }
+
+    .imagen-contacto{
+        width: 100%;
+        height: 100%;
+        display: flex; /* Asegura que los elementos hijos respeten el diseño */
+        justify-content: center; /* Centra horizontalmente el iframe */
+        align-items: center; /* Centra verticalmente el iframe */
+        overflow: hidden; /* Elimina cualquier contenido que sobresalga */
+    }
+
+    .imagen-contacto iframe {
+        width: 100%; /* El iframe ocupa todo el ancho del contenedor */
+        height: 650px;
+        padding-right: 20px;
+    }    
+
+    .contactanos {
+        background-color: #2E3E4E;
+        color: white;
+        padding: 50px 0px; /* Espaciado interno */
+        padding-left: 20px;
+    }
+
+    .contacto .nombre, .correo {
+        width: 100%; /* El input ocupa todo el ancho del contenedor */
+    }
+
+    .footer {
+        text-align: center; /* Centra el texto */
+    }
+
+    .footer-container {
+        display: flex; /* Divide en columnas */
+        justify-content: space-evenly; /* Espacia las columnas */
+        flex-wrap: wrap; /* Permite apilado en pantallas pequeñas */
+        gap: 20px; /* Espaciado entre columnas */
+    }
+
+    .copyright {
+        background-color: #46688A; /* Fondo del copyright */
+        width: 100%; /* Ocupa todo el ancho */
+        text-align: left; /* Centra el texto */
+        color: white; /* Color del texto */
+        font-size: 0.8rem; /* Tamaño del texto */
+        padding: 5px 0; /* Espaciado interno */
+        margin: 0; /* Elimina márgenes externos */
+    }
+
+    #colv1 {
+        margin-right: 0px;
+        max-width: 350px; /* Ajusta este valor según el espacio que quieras ocupar */
+    }
+    
+    #colv2, #colv3 {
+        margin-right: 0px;
+        text-align: center;
+    }
+    
+    .copyright {
+        text-align: center; /* Centra el texto */
+    }
+    .copyright p {
+        
+        padding-left: 0px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    
+    .hero {
+        justify-content: center;
+        padding-left: 0px;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+        padding-left: 0px;
+    }
+
+    .hero h2 {
+        font-size: 1rem;
+        padding-left: 0px;
+    }
+
+    .btn-hero{
+        padding-left: 0;
+    }
+
+    .caja p {
+        padding-top: 5%;
+        font-size: 0.90rem;
+        margin: 5;
+        color: #666; /* Color del texto */
+        line-height: 1.5; /* Espaciado entre líneas */
+        text-align: left;
+    }
+
+    .subcaja p {
+        padding-top: 4%;
+        font-size: 0.90rem;
+        margin: 5;
+        color: #666; /* Color del texto */
+        line-height: 1.5; /* Espaciado entre líneas */
+        text-align: left;
+    }
+
+    .choice img {
+        max-width: 500px; /* Tamaño máximo de la imagen */
+        height: auto; /* Mantiene la proporción de la imagen */
+    }
+
+    .choice .porque-elegirnos {
+        display: flex; /* Activa Flexbox para organizar la imagen y el texto en fila */
+        justify-content: center;
+        flex-direction: column; /* Elementos en columna */
+        align-items: left; /* Alinea verticalmente la imagen y el texto */
+        gap: 0px; /* Espaciado entre la imagen y el texto */
+        max-width: 1200px; /* Ancho máximo del contenedor */
+        width: 100%; /* Ocupa todo el ancho disponible */
+        margin-right: 0px;
+        margin-bottom: 30px;
+    }
+
+    .clientes {
+        margin-top: -5px;
+    }
+
+    .cajas-clientes {
+        grid-template-columns: repeat(1, 0.2fr); /* 1 columna de igual ancho */
+    }
+
+    .contactanos {
+        padding: 0px;
+    }
+
+    .contenedor-contacto {
+        flex-direction: column; /* Apila el formulario y la imagen en columnas */
+        align-items: center; /* Centra los elementos horizontalmente */
+        text-align: center; /* Alinea el texto al centro */
+        gap: 20px; /* Reduce el espaciado entre columnas */
+    }
+
+    .formulario-contacto {
+        padding: 10px 10px;
+        flex: none; /* Desactiva el ancho proporcional */
+        width: 100%; /* Ambos ocupan todo el ancho disponible */
+    }
+
+    .imagen-contacto{
+        width: 100%;
+        display: flex; /* Asegura que los elementos hijos respeten el diseño */
+        justify-content: center; /* Centra horizontalmente el iframe */
+        align-items: center; /* Centra verticalmente el iframe */
+        overflow: hidden; /* Elimina cualquier contenido que sobresalga */
+    }
+
+    .imagen-contacto iframe {
+        width: 95%; /* El iframe ocupa todo el ancho del contenedor */
+        height: 400px;
+        padding-right: 0px;
+        padding-bottom: 30px;
+    }  
+
+    .footer {
+        padding: 30px 75px;
+    }
+
+    .footer-container {
+        display: flex; /* Divide en columnas */
+        flex-wrap: wrap; /* Permite apilado en pantallas pequeñas */
+        gap: 20px; /* Espaciado entre columnas */
+        justify-content: center;
+    }
+
+    #colv2, #colv3 {
+        margin-right: 0px;
+        text-align: center;
+    }
+
+    .copyright {
+        text-align: center; /* Centra el texto */
+    }
+
+    .copyright p {
+        padding-left: 0px;
+    }
+}
+
