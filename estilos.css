@@ -1,10 +1,50 @@
 body {
     background-color: white;
 }
+
+/* navbar */
+.navbar {
+    padding: 0 20px; /* Espaciado interno horizontal */
+}
+
 .navbar-nav {
-    margin-left: 0px; /* Empuja los enlaces hacia la derecha */
-    margin-right: 0px; /* Ajusta la distancia desde la derecha */
-    font-weight: 600;
+    font-size: 1.1rem; /* Tamaño grande */
+    justify-content: center; /* Centra los enlaces */
+    gap: 30px; /* Espaciado entre enlaces */
+    font-weight: 600; /* Grosor de los enlaces */
+}
+
+.logo-navbar {
+    max-height: 50px; /* Ajusta la altura máxima */
+    object-fit: contain; /* Asegura que el logo no se deforme */
+    transform: scale(2); /* Amplía el logo al 150% de su tamaño */
+    margin-left: 50px;
+    padding-top: 5px;
+}
+
+.colapsablenav {
+    padding-right: 30px;
+}
+
+.icons {
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.social-icon {
+    max-width: 25px; /* Tamaño máximo para los iconos */
+    max-height: 25px;
+    object-fit: contain; /* Mantiene la proporción del icono */
+    transition: transform 0.3s; /* Efecto de transición */
+    cursor: pointer;
+}
+
+.icons img {
+    max-height: 50px; /* Ajusta la altura máxima */
+    object-fit: contain; /* Asegura que el logo no se deforme */
+    margin-right: 0px;
 }
 
 /* Hero Section General */
@@ -276,16 +316,40 @@ h2 span {
     z-index: 1;
 }
 
-.caja-cliente{
+.caja-cliente, .caja-cliente-ext{
     background-color: white; /* Fondo claro */
     border: 1px solid white; /* Borde gris claro */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;    /* Centra verticalmente */
     border-radius: 8px; /* Bordes redondeados */
     width: 180px; /* Ancho de cada caja */
     height: 180px; /* Altura de cada caja */
     display: flex; /* Centra el contenido dentro de la caja */
     flex-direction: column;
-    padding: 80px 30px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.35); /* Sombra suave */
+}
+
+.logo-cliente {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Ajusta la imagen sin recortarla */
+    margin: auto; /* Centra la imagen dentro de la caja */
+}
+
+.logo-cliente-2 {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block; /* Evita los márgenes extra causados por inline elements */
+    transform: scale(1.2)
+}
+
+.logo-cliente-3 {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block; /* Evita los márgenes extra causados por inline elements */
+    transform: scale(0.8)
 }
 
 /* Seccion Contactanos */
@@ -588,7 +652,7 @@ h2 span {
 
     .cajas-clientes {
         display: grid; /* Cambia a Grid */
-        grid-template-columns: repeat(3, 0.2fr); /* 3 columnas de igual ancho */
+        grid-template-columns: repeat(4, 0.2fr); /* 3 columnas de igual ancho */
         flex-wrap: wrap; /* Permite que las cajas se muevan a una nueva línea en pantallas pequeñas */
         gap: 60px; /* Espaciado entre las cajas */
         width: 100%; /* Asegura que ocupe todo el ancho disponible */
@@ -717,6 +781,15 @@ h2 span {
         margin-top: 35px;
         margin-right: 0px;
     }
+    
+    .cajas-clientes {
+        display: flex; /* Activa Flexbox */
+        flex-wrap: wrap; /* Permite que las cajas se muevan a una nueva línea en pantallas pequeñas */
+        gap: 40px; /* Espaciado entre las cajas */
+        width: 100%; /* Asegura que ocupe todo el ancho disponible */
+        justify-content: center; /* Centra las cajas horizontalmente */
+        z-index: 1;
+    }
 
     .imagen-contacto{
         width: 100%;
@@ -779,13 +852,22 @@ h2 span {
         text-align: center; /* Centra el texto */
     }
     .copyright p {
-        
         padding-left: 0px;
     }
 
 }
 
 @media (max-width: 480px) {
+
+    .colapsablenav {
+        padding-right: 0px;
+        justify-content: flex-end;
+        align-items: end;
+    }
+
+    .icons {
+        margin-left: auto;
+    }
     
     .hero {
         justify-content: center;
