@@ -349,6 +349,14 @@ h2 span {
     max-height: 100%;
     object-fit: contain;
     display: block; /* Evita los márgenes extra causados por inline elements */
+    transform: scale(1.4)
+}
+
+.logo-cliente-4 {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block; /* Evita los márgenes extra causados por inline elements */
     transform: scale(0.8)
 }
 
