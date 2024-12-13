@@ -259,6 +259,10 @@ h2 span {
     margin-bottom: 30px;
 }
 
+.eleccion {
+    max-width: 50%;
+}
+
 .choice h2 {
     padding-bottom: 15px;
     font-weight: 650;
@@ -270,9 +274,7 @@ h2 span {
 }
 
 .choice p {
-    display: flex; /* Activa Flexbox */
-    flex-direction: column; /* Coloca los elementos en columna */
-    justify-content: flex-start; /* Alinea los elementos al inicio */
+    display: block; /* Activa Flexbox */
     text-align: left; /* Alinea el texto a la izquierda */
     font-weight: 520;
     padding-left: 0px;
@@ -282,6 +284,30 @@ h2 span {
     max-width: 800px; /* Tamaño máximo de la imagen */
     height: auto; /* Mantiene la proporción de la imagen */
     object-fit: cover; /* Ajusta el contenido si la imagen tiene proporciones diferentes */
+}
+
+/*Fade de Apriori*/
+
+#slogan {
+    font-size: 1.3rem;
+}
+
+#fade-word {
+    display: inline-block;
+    width: 90px; /* Define un ancho fijo basado en la palabra más larga */
+    text-align: center; /* Asegura que las palabras estén centradas */
+    white-space: nowrap; /* Evita saltos de línea */
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+    color: #F81811;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+.fade-in {
+    opacity: 1;
 }
 
 /* Seccion Clientes */
@@ -452,7 +478,7 @@ h2 span {
     display: flex;
     justify-content: center;
     margin-top: 35px;
-    margin-right: 40px;
+    margin-right: 60px;
 }
 
 .btn-contactanos {
@@ -483,6 +509,7 @@ h2 span {
 }
 
 .btn-servicio {
+    text-decoration: none; /* Elimina el subrayado del enlace */
     padding: 18px 20px;
     font-size: 1rem;
     font-weight: 600;
@@ -593,6 +620,18 @@ h2 span {
 
 /* Responsividad */
 
+@media(max-width: 1585px) {
+    .cajas-clientes {
+        display: grid; /* Cambia a Grid */
+        grid-template-columns: repeat(4, 0.15fr); /* 3 columnas de igual ancho */
+        flex-wrap: wrap; /* Permite que las cajas se muevan a una nueva línea en pantallas pequeñas */
+        gap: 60px; /* Espaciado entre las cajas */
+        width: 100%; /* Asegura que ocupe todo el ancho disponible */
+        justify-content: center; /* Centra las cajas horizontalmente */
+        z-index: 1;
+    }
+}
+
 @media (max-width: 1024px) {
     .hero {
         justify-content: flex-start;
@@ -649,6 +688,10 @@ h2 span {
         justify-content: center; /* Alinea los elementos al inicio */
         text-align: left; /* Alinea el texto a la izquierda */
         font-weight: 520;
+    }
+
+    .eleccion {
+        max-width: 100%;
     }
     
     .btn-choices {
@@ -983,7 +1026,8 @@ h2 span {
     }
 
     #colv2, #colv3 {
-        margin-right: 0px;
+        margin-right: 0;
+        padding-right: 0;
         text-align: center;
     }
 

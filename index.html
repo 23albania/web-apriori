@@ -61,7 +61,6 @@
         </div>
     </nav>
     
-    
     <!-- Hero Section -->
     <div class="hero">
         <div>
@@ -75,15 +74,16 @@
                 <br>
                 <span>optimización y gestión avanzada de sistemas</span>
             </h2>
-            <div class="btn-hero"> <!--REVISAR-->
-                <button type="button" class="btn-escribenos">Escríbenos</button>
-                <button type="button" class="btn-sobre">Sobre Nosotros</button>
+            <div class="btn-hero"> 
+                <button type="button" class="btn-escribenos" id="btn-escribenos">Escríbenos</button>
+                <button type="button" class="btn-sobre" id="btn-sobre">Sobre Nosotros</button>
             </div>
             
         </div>
     </div>
+
     <!--Seccion de Servicios-->
-    <div class="servicios">
+    <div id="servicios" class="servicios">
         <h2>Nuestros Servicios</h2>
         <div class="cajas">
             <div class="caja">
@@ -130,29 +130,35 @@
             </div>
         </div>
         <div class="btn-servicios"> 
-            <button type="button" class="btn-servicio">Descargar el Detalle</button>
+            <a href="Pared/paredpriori_v3.pdf" download="Detalle_Servicios_Apriori.pdf" class="btn-servicio">Descargar el Detalle</a>
         </div>
     </div>
-      <!-- Seccion porque elegirnos -->
+    
+    <!-- Seccion porque elegirnos -->
     <div class="choice">
         <div class="porque-elegirnos">
             <img src="./imgs/handshke.png" alt="Imagen Representativa">
-            <div>
+            <div class="eleccion">
                 <h2>¿Por qué elegirnos?</h2>
                 <p>
                     Desde 2003, en Apriori Consultores hemos brindado soluciones personalizadas que combinan experiencia, innovación y compromiso. 
-                    Nuestro equipo multidisciplinario asegura una visión integral para resolver los desafíos únicos de cada cliente. 
-                    Nos destacamos por nuestra capacidad de respuesta rápida y eficaz, trabajando bajo altos estándares de calidad que 
-                    generan confianza y resultados tangibles. Con más de dos décadas de trayectoria, somos aliados estratégicos de organizaciones 
-                    nacionales e internacionales que buscan crecer con seguridad y excelencia.
+                    Nuestro equipo multidisciplinario asegura una visión integral para resolver los desafíos únicos de cada cliente. Nos destacamos 
+                    por nuestra capacidad de respuesta rápida y eficaz, trabajando bajo altos estándares de calidad que generan confianza y resultados tangibles.
                 </p>
+                <p>
+                    Con más de dos décadas de trayectoria, hemos perfeccionado nuestra metodología para ofrecer servicios integrales en consultoría, análisis de datos, 
+                    robotización de procesos y optimización empresarial. Nuestro enfoque combina herramientas tecnológicas avanzadas con un profundo conocimiento del mercado, 
+                    permitiéndonos identificar y superar los retos que enfrentan las organizaciones en un entorno cada vez más competitivo. 
+                </p>
+                <p id="slogan"><span id="fade-word">Apriori a</span> tomar una decisión, llámanos.</p>
                 <div class="btn-choices"> 
-                    <button type="button" class="btn-choice">Descargar el Detalle</button>
+                    <button type="button" class="btn-choice" id="btn-choice">Ir al Contacto</button>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Seccion Clientes -->
+
+      <!-- Seccion Clientes -->
     <div class="clientes py-4">
         <h5>Clientes</h5>
         <h3>Algunos de Nuestros Principales Clientes</h3>
@@ -167,7 +173,7 @@
                 <img src="./imgs/unnio_logo.png" alt="Cliente 3" class="logo-cliente">
             </div>
             <div class="caja-cliente">
-                <img src="./imgs/quimetal_logo.png" alt="Cliente 4" class="logo-cliente-3">
+                <img src="./imgs/quimetal_logo.png" alt="Cliente 4" class="logo-cliente-4">
             </div>
             <div class="caja-cliente">
                 <img src="./imgs/Logo_Altiplano.png" alt="Cliente 5" class="logo-cliente-2">
@@ -183,9 +189,9 @@
             </div>
         </div>
     </div>
-    
+
     <!-- Sección Contactanos -->
-    <div class="contactanos">
+    <div id="contactanos" class="contactanos">
         <div class="contenedor-contacto">
             <!-- Columna Izquierda: Formulario -->
             <div class="formulario-contacto">
@@ -219,7 +225,7 @@
         </div>
     </div>
 
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <div class="footer-container">
             <!-- Columna 1: Información de contacto -->
             <div class="footer-col" id="colv1">
