@@ -16,7 +16,6 @@
 </head>
 
 <body>
-
     <nav class="navbar navbar-expand-sm bg-white navbar-white">
         <div class="container-fluid">
             <!-- Logo Izquierdo -->
@@ -200,6 +199,7 @@
                 <h2>Ponte en Contacto con Nosotros</h2>
                 <form action="https://api.web3forms.com/submit" method="POST" id="contact-form" name="redirect" value="https://23albania.github.io/web-apriori/">
                     <div class="contacto">
+
                         <input type="hidden" name="access_key" value="85975db6-1140-4a22-80ed-01041f1229c8">
                         <p>Ingresa tu Nombre Completo</p>
                         <input type="text" class="nombre" id="nombre" name="nombre" placeholder="Tu Nombre Completo" required><br>
@@ -208,6 +208,10 @@
                         <p>Cuentanos que Necesitas</p>
                         <textarea class="cuentanos" id="cuentanos" name="cuentanos" placeholder="Escribe tu mensaje aquí..." maxlength="5000"></textarea>
                         <div id="char-counter">0/5000 caracteres</div>
+                        <!-- Honeypot Spam Protection -->
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                        <!-- Redirección personalizada -->
+                        <input type="hidden" name="redirect" value="https://23albania.github.io/web-apriori/gracias.html"> <!--Ajustar al momento de mover a un host-->
                         <div class="btn-contactanos"> 
                             <button type="submit" class="btn-contacto">Enviar</button>
                         </div>
@@ -264,6 +268,7 @@
             </div>
         </div>
     </footer>
+    
     <!-- Sección de Copyright -->
     <section class="copyright">
         <p>© 2024 Apriori Consultores. Todos los derechos reservados.</p>
