@@ -427,6 +427,7 @@ h2 span {
     font-size: 1rem;
     border-radius: 0px; /* Bordes redondeados */
     background-color: #375E86;
+    color: white;
 }
 
 .contacto .cuentanos {
@@ -442,6 +443,13 @@ h2 span {
     background-color: #375E86;
     color: white; /* Color del texto */
     resize: none; /* Evita que el usuario cambie el tamaño del textarea */
+}
+
+/* Cambia el color del placeholder para todos los inputs y el textarea */
+input::placeholder, 
+textarea::placeholder {
+    color: #E5E5E5; /* Color gris claro */
+    font-style: italic; /* Opcional: agrega estilo al texto */
 }
 
 .imagen-contacto {

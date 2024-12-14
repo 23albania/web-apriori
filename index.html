@@ -14,7 +14,8 @@
         }
     </style>
 </head>
-<body>
+
+<body onload="document.getElementById('contact-form').reset();">
 
     <nav class="navbar navbar-expand-sm bg-white navbar-white">
         <div class="container-fluid">
@@ -197,18 +198,21 @@
             <div class="formulario-contacto">
                 <h5>CONTACTA NUESTRA OFICINA EN PROVIDENCIA</h5>
                 <h2>Ponte en Contacto con Nosotros</h2>
-                <div class="contacto">
-                    <p>Ingresa tu Nombre Completo</p>
-                    <input type="text" class="nombre" id="nombre" name="nombre"><br>
-                    <p>Ingresa tu Correo</p>
-                    <input type="text" class="correo" id="correo" name="correo"><br>
-                    <p>Cuentanos que Necesitas</p>
-                    <textarea type="text" class="cuentanos" id="cuentanos" name="cuentanos"></textarea>
-                    <div id="char-counter">0/5000 caracteres</div>
-                    <div class="btn-contactanos"> 
-                        <button type="button" class="btn-contacto">Enviar</button>
+                <form action="https://api.web3forms.com/submit" method="POST" id="contact-form">
+                    <div class="contacto">
+                        <input type="hidden" name="access_key" value="85975db6-1140-4a22-80ed-01041f1229c8">
+                        <p>Ingresa tu Nombre Completo</p>
+                        <input type="text" class="nombre" id="nombre" name="nombre" placeholder="Tu Nombre Completo" required><br>
+                        <p>Ingresa tu Correo</p>
+                        <input type="email" class="correo" id="correo" name="correo" placeholder="Tu Correo Electrónico" required><br>
+                        <p>Cuentanos que Necesitas</p>
+                        <textarea class="cuentanos" id="cuentanos" name="cuentanos" placeholder="Escribe tu mensaje aquí..." maxlength="5000"></textarea>
+                        <div id="char-counter">0/5000 caracteres</div>
+                        <div class="btn-contactanos"> 
+                            <button type="submit" class="btn-contacto">Enviar</button>
+                        </div>
                     </div>
-                </div>
+                </form>
             </div>
             <!-- Columna Derecha: Imagen -->
             <div class="imagen-contacto">
@@ -225,6 +229,7 @@
         </div>
     </div>
 
+    <!--FOOTER-->
     <footer class="footer" id="footer">
         <div class="footer-container">
             <!-- Columna 1: Información de contacto -->
