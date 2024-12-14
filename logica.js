@@ -33,7 +33,7 @@ textarea.addEventListener('input', () => {
     }
 });
 
-const words = ["Apriori a","Antes de"];
+const words = ["Apriori","Antes de"];
 let currentWordIndex = 0;
 
 setInterval(() => {

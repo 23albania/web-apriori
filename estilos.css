@@ -49,7 +49,7 @@ body {
 
 /* Hero Section General */
 .hero {
-    background-image: url(./imgs/imgaprioriv2.jpg); /* URL de la imagen de fondo */
+    background-image: url(./imgs/buildings-1804479_1280.jpg); /* URL de la imagen de fondo */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -69,7 +69,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.25); /* Superposición oscura */
+    background-color: rgba(0, 0, 0, 0.1); /* Superposición oscura */
     z-index: 1;
 }
   
@@ -244,7 +244,6 @@ h2 span {
     min-height: 60vh; /* Altura completa de la ventana */
     background-color: #F6F6F6; /* Fondo gris */
     padding-top: 0px; /* Espaciado interno */
-    
 }
 
 .choice .porque-elegirnos {
@@ -252,15 +251,41 @@ h2 span {
     justify-content: left; /* Centra el contenido */
     align-items: left; /* Alinea verticalmente la imagen y el texto */
     gap: 40px; /* Espaciado entre la imagen y el texto */
-    max-width: 1200px; /* Ancho máximo del contenedor */
+    max-width: 1300px; /* Ancho máximo del contenedor */
     width: 100%; /* Ocupa todo el ancho disponible */
-    margin-right: 160px;
+    margin-right: 0px;
     margin-top: 30px;
     margin-bottom: 30px;
 }
 
+.imagen-container {
+    position: relative; /* Posiciona los créditos dentro del contenedor */
+    max-width: 800px; /* Tamaño máximo de la imagen */
+    height: auto; /* Ajusta la altura automáticamente */
+}
+
+.imagen-container img {
+    width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+    height: 100%; /* Mantiene las proporciones */
+    object-fit: cover; /* Ajusta el contenido si la imagen tiene proporciones diferentes */
+}
+
+.creditos {
+    position: absolute;
+    left: 5px; /* Espaciado desde el borde izquierdo */
+    font-size: 0.9rem;
+    color: #666; /* Color gris para el texto */
+    background: rgba(255, 255, 255, 0.6); /* Fondo semitransparente para mejor visibilidad */
+    padding: 2px 5px; /* Espaciado interno del texto */
+    border-radius: 3px; /* Bordes redondeados */
+}
+
+.creditos a {
+    text-decoration: none; /* Quita el subrayado */
+}
+
 .eleccion {
-    max-width: 50%;
+    max-width: 40%;
 }
 
 .choice h2 {
@@ -280,12 +305,6 @@ h2 span {
     padding-left: 0px;
 }
 
-.choice img {
-    max-width: 800px; /* Tamaño máximo de la imagen */
-    height: auto; /* Mantiene la proporción de la imagen */
-    object-fit: cover; /* Ajusta el contenido si la imagen tiene proporciones diferentes */
-}
-
 /*Fade de Apriori*/
 
 #slogan {
@@ -299,7 +318,7 @@ h2 span {
     white-space: nowrap; /* Evita saltos de línea */
     opacity: 1;
     transition: opacity 1s ease-in-out;
-    color: #F81811;
+    color: #362B77;
 }
 
 .fade-out {
@@ -658,11 +677,6 @@ textarea::placeholder {
     .btn-servicio{
         margin-top: 0px;
     }
-    
-    .choice img {
-        max-width: 500px; /* Tamaño máximo de la imagen */
-        height: auto; /* Mantiene la proporción de la imagen */
-    }
 
     .choice .porque-elegirnos {
         display: flex; /* Activa Flexbox para organizar la imagen y el texto en fila */
@@ -698,14 +712,37 @@ textarea::placeholder {
         font-weight: 520;
     }
 
-    .eleccion {
-        max-width: 100%;
+    .imagen-container {
+        position: relative; /* Posiciona los créditos dentro del contenedor */
+        max-width: 600px; /* Tamaño máximo de la imagen */
+        height: auto; /* Ajusta la altura automáticamente */
     }
     
+    .imagen-container img {
+        width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+        height: 95%; /* Mantiene las proporciones */
+        object-fit: cover; /* Ajusta el contenido si la imagen tiene proporciones diferentes */
+    }
+
+    .creditos {
+        position: absolute;
+        left: 0px; /* Espaciado desde el borde izquierdo */
+        font-size: 0.9rem;
+        color: #666; /* Color gris para el texto */
+        background: rgba(255, 255, 255, 0.6); /* Fondo semitransparente para mejor visibilidad */
+        padding: 0px 0px !important; /* Espaciado interno del texto */
+        border-radius: 3px; /* Bordes redondeados */
+    }
+
+    .eleccion {
+        max-width: 50%;
+    }
+
     .btn-choices {
         display: flex;
         justify-content: center;
-        margin-top: 35px;
+        margin-top: 15px;
+        margin-bottom: 25px;
         margin-right: 0px;
     }
 
@@ -797,9 +834,27 @@ textarea::placeholder {
         margin-top: 50px;
         z-index: 1;
     }
-    .choice img {
-        max-width: 400px; /* Tamaño máximo de la imagen */
-        height: auto; /* Mantiene la proporción de la imagen */
+
+    .imagen-container {
+        position: relative; /* Posiciona los créditos dentro del contenedor */
+        max-width: 600px; /* Tamaño máximo de la imagen */
+        height: auto; /* Ajusta la altura automáticamente */
+    }
+    
+    .imagen-container img {
+        width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+        height: 98%; /* Mantiene las proporciones */
+        object-fit: cover; /* Ajusta el contenido si la imagen tiene proporciones diferentes */
+    }
+
+    .creditos {
+        position: absolute;
+        left: 0px; /* Espaciado desde el borde izquierdo */
+        font-size: 0.9rem;
+        color: #666; /* Color gris para el texto */
+        background: rgba(255, 255, 255, 0.6); /* Fondo semitransparente para mejor visibilidad */
+        padding: 0px 0px !important; /* Espaciado interno del texto */
+        border-radius: 3px; /* Bordes redondeados */
     }
 
     .choice .porque-elegirnos {
@@ -965,9 +1020,32 @@ textarea::placeholder {
         text-align: left;
     }
 
-    .choice img {
+    .imagen-container {
+        position: relative; /* Posiciona los créditos dentro del contenedor */
         max-width: 500px; /* Tamaño máximo de la imagen */
-        height: auto; /* Mantiene la proporción de la imagen */
+        height: auto; /* Ajusta la altura automáticamente */
+        flex-wrap: wrap; /* Permite apilado en pantallas pequeñas */
+    }
+    
+    .imagen-container img {
+        width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+        height: 100%; /* Mantiene las proporciones */
+        object-fit: cover; /* Ajusta el contenido si la imagen tiene proporciones diferentes */
+    }
+
+    .creditos {
+        position: absolute;
+        left: 0px; /* Espaciado desde el borde izquierdo */
+        font-size: 0.9rem;
+        color: #666; /* Color gris para el texto */
+        background: rgba(255, 255, 255, 0.6); /* Fondo semitransparente para mejor visibilidad */
+        padding: 0px 0px !important; /* Espaciado interno del texto */
+        border-radius: 3px; /* Bordes redondeados */
+    }
+
+    .eleccion {
+        margin-top: 20px;
+        max-width: 100%;
     }
 
     .choice .porque-elegirnos {
@@ -980,6 +1058,10 @@ textarea::placeholder {
         width: 100%; /* Ocupa todo el ancho disponible */
         margin-right: 0px;
         margin-bottom: 30px;
+    }
+
+    .btn-choices {
+        margin: 0 ;
     }
 
     .clientes {
