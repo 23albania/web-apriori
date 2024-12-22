@@ -1,3 +1,3 @@
-Diseño y Creación de web para empresa apriori (proyecto personal)
+Diseño y Creación de web para empresa apriori (proyecto personal).
 
-Link pages github: https://23albania.github.io/web-apriori/
+Link pages github: https://23albania.github.io/web-apriori/ 
